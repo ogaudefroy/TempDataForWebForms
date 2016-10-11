@@ -74,9 +74,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="TempDataForWebForms.nuspec" />
+    <None Include="TempDataForWebForms.nuspec" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="content\web.config.uninstall.xdt" />
+    <None Include="content\web.config.install.xdt" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

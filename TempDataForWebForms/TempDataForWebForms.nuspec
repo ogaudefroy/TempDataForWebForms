@@ -12,4 +12,7 @@
     </releaseNotes>
     <copyright>$copyright$</copyright>
   </metadata>
+  <files>
+    <file src="content\**\*" target="content" />
+  </files>
 </package>
