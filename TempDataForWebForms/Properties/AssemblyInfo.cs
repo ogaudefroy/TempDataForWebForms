@@ -3,9 +3,9 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 [assembly: AssemblyTitle("TempDataForWebForms")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("TempData support for ASP.Net WebForms")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Olivier GAUDEFROY")]
 [assembly: AssemblyProduct("TempDataForWebForms")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
