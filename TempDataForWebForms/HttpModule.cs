@@ -42,7 +42,7 @@
                 return;
             }
             var tempData = new TempDataDictionary();
-            var tempDataProvider = DependencyResolver.Current.GetService<ITempDataProvider>();
+            var tempDataProvider = CreateTempDataProvider();
             tempData.Load(new ControllerContext() { HttpContext = httpContext }, tempDataProvider);
             httpContext.Items[KEY_TEMPDATA_HTTP_CONTEXT_ITEMS] = tempData;
         }
@@ -54,7 +54,7 @@
         internal void OnEndRequest(HttpContextBase httpContext)
         {
             var tempData = httpContext.Items[KEY_TEMPDATA_HTTP_CONTEXT_ITEMS] as TempDataDictionary;
-            var tempDataProvider = DependencyResolver.Current.GetService<ITempDataProvider>();
+            var tempDataProvider = CreateTempDataProvider();
             if (tempData == null)
             {
                 return;
@@ -74,6 +74,20 @@
         private static EventHandler WrapHttpContext(Action<HttpContextBase> handler)
         {
             return (sender, e) => handler(new HttpContextWrapper(((HttpApplication)sender).Context));
+        }
+
+        /// <summary>
+        /// Creates a ITempDataProvider instance based on current MVC Dependency resolution configuration.
+        /// </summary>
+        /// <returns>>A temporary data provider.</returns>
+        private static ITempDataProvider CreateTempDataProvider()
+        {
+            ITempDataProviderFactory service = DependencyResolver.Current.GetService<ITempDataProviderFactory>();
+            if (service != null)
+            {
+                return service.CreateInstance();
+            }
+            return DependencyResolver.Current.GetService<ITempDataProvider>() ?? new SessionStateTempDataProvider();
         }
     }
 }
