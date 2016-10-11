@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package>
+  <metadata minClientVersion="2.7">
+    <id>$id$</id>
+    <version>$version$</version>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+    <projectUrl>https://github.com/ogaudefroy/TempDataForWebForms</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>TempData support for ASP.Net WebForms</description>
+    <releaseNotes>
+    </releaseNotes>
+    <copyright>$copyright$</copyright>
+  </metadata>
+</package>
