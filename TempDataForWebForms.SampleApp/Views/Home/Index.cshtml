@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>SampleApp - Razor View</title>
+</head>
+<body>
+<h1>This is a Razor View rendered through ASP.Net MVC pipeline</h1>
+<div>
+    <h2>Current TempData values: @TempData.Count</h2>
+    <ul>
+        @foreach (var key in TempData.Keys)
+        {
+            <li>@key : @TempData[key]</li>
+        }
+    </ul>
+</div>
+<div>
+    @using (Html.BeginForm())
+    {
+        <input type="submit" value="Emit TempData and Redirect to WebForms"/>
+    }
+</div>
+</body>
+</html>
