@@ -120,6 +120,10 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <ProjectReference Include="..\TempDataForWebForms.TestUtils\TempDataForWebForms.TestUtils.csproj">
+      <Project>{b4036a43-3805-4f62-971c-2610f4013460}</Project>
+      <Name>TempDataForWebForms.TestUtils</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TempDataForWebForms\TempDataForWebForms.csproj">
       <Project>{a1c65c58-178d-4a61-89f4-3894c226a3ca}</Project>
       <Name>TempDataForWebForms</Name>

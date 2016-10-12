@@ -10,6 +10,8 @@
     <h1>This is an ASP.Net WebForms page</h1>
     <div>
         <h2>Current TempData values: <%: this.TempData.Count %></h2>
+        <ul runat="server" ID="list">
+        </ul>
     </div>
     <form id="form1" runat="server">
         <div>
@@ -18,3 +20,4 @@
     </form>
 </body>
 </html>
+

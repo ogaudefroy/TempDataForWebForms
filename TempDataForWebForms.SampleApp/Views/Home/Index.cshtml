@@ -15,7 +15,7 @@
     </ul>
 </div>
 <div>
-    @using (Html.BeginForm())
+    @using (Html.BeginForm("PostToWebForms", "Home"))
     {
         <input type="submit" value="Emit TempData and Redirect to WebForms"/>
     }

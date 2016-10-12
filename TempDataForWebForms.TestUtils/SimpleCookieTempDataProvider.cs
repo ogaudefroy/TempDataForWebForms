@@ -1,4 +1,4 @@
-﻿namespace TempDataForWebForms.Tests.Utils
+﻿namespace TempDataForWebForms.TestUtils
 {
     using System;
     using System.Collections.Generic;
@@ -9,9 +9,9 @@
     /// <summary>
     /// A simple implementation of tempdata provider using cookies.
     /// </summary>
-    internal class SimpleCookieTempDataProvider : ITempDataProvider
+    public class SimpleCookieTempDataProvider : ITempDataProvider
     {
-        internal const string TEMP_DATA_COOKIE_KEY = "__ControllerTempData";
+        public const string TEMP_DATA_COOKIE_KEY = "__ControllerTempData";
 
         public IDictionary<string, object> LoadTempData(ControllerContext controllerContext)
         {

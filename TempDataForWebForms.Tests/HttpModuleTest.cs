@@ -8,7 +8,7 @@
     using System.Web.UI;
     using Moq;
     using NUnit.Framework;
-    using TempDataForWebForms.Tests.Utils;
+    using TestUtils;
 
     [TestFixture]
     public class HttpModuleTest
@@ -16,22 +16,7 @@
         [TestFixtureSetUp]
         public void SetUp()
         {
-            DependencyResolver.SetResolver((t) =>
-            {
-                if (t == typeof(ITempDataProvider))
-                {
-                    return new SimpleCookieTempDataProvider();
-                }
-                return null;
-            },
-            (t) =>
-            {
-                if (t == typeof(ITempDataProvider))
-                {
-                    return new List<ITempDataProvider>() { new SimpleCookieTempDataProvider() };
-                }
-                return null;
-            });
+            DependencyResolver.SetResolver(new TestDependencyResolver());
         }
 
         [Test]

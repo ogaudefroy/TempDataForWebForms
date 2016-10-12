@@ -1,4 +1,4 @@
-﻿namespace TempDataForWebForms.Tests.Utils
+﻿namespace TempDataForWebForms.TestUtils
 {
     using System;
     using System.Collections.Generic;
@@ -8,7 +8,7 @@
     /// <summary>
     /// Set of extension methods on IDictionary.
     /// </summary>
-    internal static class IDictionaryExtensions
+    public static class IDictionaryExtensions
     {
         /// <summary>
         /// Deserializes an base 64 encoded string in a dictionary with binary formatter.
