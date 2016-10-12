@@ -7,8 +7,9 @@
     <owners>$author$</owners>
     <projectUrl>https://github.com/ogaudefroy/TempDataForWebForms</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>TempData support for ASP.Net WebForms</description>
+    <description>$description$</description>
     <releaseNotes>
+      Initial release
     </releaseNotes>
     <copyright>$copyright$</copyright>
   </metadata>
