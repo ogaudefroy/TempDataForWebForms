@@ -1,7 +1,7 @@
 # TempDataForWebForms
 A simple library to provide ASP.Net MVC TempData like support in WebForms pages.
 
-[![Build status](https://ci.appveyor.com/api/projects/status/vvt1r802829nny9g/branch/master?svg=true)](https://ci.appveyor.com/project/ogaudefroy/tempdataforwebforms/branch/master)
+[![Build status](https://ci.appveyor.com/api/projects/status/vvt1r802829nny9g/branch/master?svg=true)](https://ci.appveyor.com/project/ogaudefroy/tempdataforwebforms/branch/master) [![NuGet version](https://badge.fury.io/nu/TempDataForWebForms.svg)](https://badge.fury.io/nu/TempDataForWebForms)
 
 This component might help you when mixin ASP.Net WebForms navigation flow with ASP.Net MVC navigation flow in the same application.
 
